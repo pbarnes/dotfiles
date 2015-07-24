@@ -1,0 +1,144 @@
+if has("gui_running")
+  colorscheme flatlandia
+  "colorscheme hybrid
+  "colorscheme railscasts
+  "colorscheme codeschool
+  "colorscheme hybrid
+  "colorscheme darkspectrum
+  "colorscheme jellybeans
+  " This is font size dependent, currently Menlo 12pt
+  set lines=82
+  set transparency=0
+else
+     "colorscheme jellybeans
+     let g:indent_guides_enable_on_vim_startup = 0
+endif
+
+UnBundle 'spf13/vim-autoclose'
+"UnBundle 'sandeepcr529/Buffet.vim'
+UnBundle 'bling/vim-bufferline'
+let g:bufferline_echo=0
+
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline:h13
+" set guifont=Liberation\ Mono\ for\ Powerline:h12
+"set guifont=Inconsolata-dz\ for\ Powerline:h12
+"set guifont=Menlo\ Regular\ for\ Powerline:h12
+"set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h12
+set guifont=Office\ Code\ Pro:h12
+
+set timeoutlen=500
+set shell=zsh
+set iminsert=0
+set noautochdir
+set nospell
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set number
+set pastetoggle=<F6>           " pastetoggle (sane indentation on pastes) - overrides default of F12
+
+" This gets overridden by InitializeDirectories() in .vimrc by spf13 :/
+" set noswapfile
+" So instead, lets just kill the 'attention' prompt
+set shortmess=aA
+set cmdheight=1
+
+nnoremap <ESC> :noh<CR>
+nnoremap c "_c
+vnoremap c "_c
+nnoremap C "_C
+vnoremap C "_C
+
+" Remap ESC
+imap jj <Esc>
+
+" Simpler window movements
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+
+" SPF13 overrides
+let g:spf13_no_views=1
+let g:spf13_no_autochdir=1
+let g:spf13_no_easyWindows = 1
+
+"nmap <leader>f :Grep
+nmap <leader>b :Bufferlist<cr>
+"nmap <leader>ht :%!tidy -i -asxhtml -utf8
+nmap <leader>db :bp<bar>sp<bar>bn<bar>bd<CR>
+
+" set et!
+
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+set listchars=tab:▸\ ,eol:¬
+hi NonText guifg=#333333 ctermfg=333
+hi SpecialKey guifg=#333333 ctermfg=233
+
+let g:indent_guides_color_change_percent = 2
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+"""""""""""""""""""
+" PLUGIN SETTINGS "
+"""""""""""""""""""
+
+" Airline plugin settings
+"let g:airline_theme='luna'
+let g:airline_theme='flatlandia'
+let g:airline_powerline_fonts=1
+let g:airline_detect_paste=1
+let g:airline_detect_iminsert=1
+"let g:airline_enable_syntastic=1
+let g:airline_section_b=""
+let g:airline_section_y=""
+let g:airline_mode_map = {
+      \ '__' : '------',
+      \ 'n'  : 'NOR',
+      \ 'i'  : 'INS',
+      \ 'R'  : 'REP',
+      \ 'v'  : 'VIS',
+      \ 'V'  : 'V-L',
+      \ 'c'  : 'COM',
+      \ '' : 'V-B',
+      \ 's'  : 'SEL',
+      \ 'S'  : 'S-L',
+      \ '' : 'S-B',
+      \ }
+
+" NERDTree settings
+let NERDTreeIgnore=['\.DS_Store']
+let NERDTreeChDirMode=0
+map <M-\> :NERDTreeToggle<CR>
+
+" CTRL-P settings
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$|node_modules$',
+    \ 'file': '\.exe$\|\.so$\|\.dll$' }
+
+" CoffeeTags settings
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+endif
+
+" Syntastic config
+" the below automatically pops up the :Errors window, but even for warnings so
+" it gets annoying
+let g:syntastic_check_on_open=1
+"let g:syntastic_auto_loc_list=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_loc_list_height=5
+

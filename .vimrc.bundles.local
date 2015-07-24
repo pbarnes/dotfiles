@@ -1,0 +1,29 @@
+let g:spf13_no_autochdir = 1
+
+"let g:spf13_bundle_groups=['general', 'programming', 'ruby', 'python', 'javascript', 'html', 'misc' , 'snipmate']
+
+""Bundle 'jeetsukumaran/vim-buffergator'
+""Bundle 'tomtom/tcomment_vim'
+"Bundle 'ervandew/supertab'
+""Bundle 'vim-scripts/EasyGrep'
+"Bundle 'regedarek/ZoomWin'
+"Bundle 'sandeepcr529/Buffet.vim'
+
+" Syntax
+"Bundle 'digitaltoad/vim-jade'
+"Bundle 'mv/mv-vim-nginx'
+Bundle 'jimenezrick/vimerl'
+
+" Color
+Bundle 'jpo/vim-railscasts-theme'
+Bundle 'jordwalke/flatlandia'
+" Bundle 'fortes/vim-railscasts'
+"Bundle 'vim-scripts/Son-of-Obisidian'
+""Bundle 'jonathanfilip/vim-lucius'
+""Bundle 'Lokaltog/vim-distinguished'
+""Bundle 'morhetz/gruvbox'
+
+"Bundle 'airblade/vim-rooter'
+"Bundle 'aaronbieber/vim-quicktask'
+Bundle 'skammer/vim-css-color'
+Bundle 'elixir-lang/vim-elixir'

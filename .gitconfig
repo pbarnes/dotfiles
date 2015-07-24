@@ -1,0 +1,28 @@
+[user]
+	name = Phil Barnes
+  email = phillip.barnes@gmail.com
+
+[alias]
+  st = status
+	up = pull --ff-only --all -p
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[color]
+	diff = auto
+[push]
+	default = simple
+[github]
+	user = pbarnes
+[core]
+	editor = vim
+	excludesfile = /Users/pbarnes/.gitignore_global
+	;editor = mvim -f --nomru -c \"au VimLeave * !open -a iTerm\"
+;[url "https://github.com/"]
+;    insteadOf = git://github.com/
+;[url "https://github.com/"]
+;    insteadOf = git@github.com:
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
