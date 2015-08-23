@@ -1,6 +1,7 @@
 let g:spf13_no_autochdir = 1
 
-"let g:spf13_bundle_groups=['general', 'programming', 'ruby', 'python', 'javascript', 'html', 'misc' , 'snipmate']
+"let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
+let g:spf13_bundle_groups=['general', 'writing', 'youcompleteme', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
 
 ""Bundle 'jeetsukumaran/vim-buffergator'
 ""Bundle 'tomtom/tcomment_vim'
@@ -27,3 +28,4 @@ Bundle 'jordwalke/flatlandia'
 "Bundle 'aaronbieber/vim-quicktask'
 Bundle 'skammer/vim-css-color'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'mhartington/oceanic-next'
