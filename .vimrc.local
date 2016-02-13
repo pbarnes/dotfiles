@@ -20,10 +20,14 @@ else
      let g:indent_guides_enable_on_vim_startup = 0
 endif
 
+UnBundle 'jiangmiao/auto-pairs'
 UnBundle 'spf13/vim-autoclose'
 "UnBundle 'sandeepcr529/Buffet.vim'
 UnBundle 'bling/vim-bufferline'
 let g:bufferline_echo=0
+
+" JSX
+let g:jsx_ext_required = 0
 
 " set guifont=Droid\ Sans\ Mono\ for\ Powerline:h13
 " set guifont=Liberation\ Mono\ for\ Powerline:h12
